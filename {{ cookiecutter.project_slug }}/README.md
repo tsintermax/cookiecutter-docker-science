@@ -97,7 +97,7 @@ access the Jupyter Notebook service in http://localhost:{{ cookiecutter.jupyter_
 ├── tests
 │     ├── \__init\__.py
 │     └── test_sample.py
-└── {{\ cookiecutter.project_slug\ }}
+└── {{ cookiecutter.project_slug }}
     ├──\__init\__.py										 <- Makes src a Python module
     ├── data_cleansing
     ├── data_gens								<- Scripts to download or generate data	
