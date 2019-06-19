@@ -74,6 +74,39 @@ When you see the status of Docker container, please run `make profile` in host m
 To launch Jupyter Notebook, please run `make jupyter` in the Docker container. After launch the Jupyter Notebook, you can
 access the Jupyter Notebook service in http://localhost:{{ cookiecutter.jupyter_host_port }}.
 
-# Credits
+## Directory Map
+
+├── Makefile
+├── README.md
+├── config
+├── data
+│   ├── external								 <- Data from third party sources.
+│   ├── interim								   <- Intermediate data that has been transformed.
+│   ├── processed							 <- The final, canonical data sets for modeling.
+│   └── raw										<- The original, immutable data dump.
+├── docker
+│   └── Dockerfile
+├── model											<- Trained and serialized models, model predictions, or model summaries
+├── notebook									  <- Jupyter notebooks. Naming convention is a number (for ordering), │                         the creator's initials, and a short `-` delimited description, e.g.  `1.0-jqp-initial-data-exploration`.
+├── references									<- Data dictionaries, manuals, and all other explanatory materials.
+├── reports							  		 	<- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures									 <- Generated graphics and figures to be used in reporting
+├── requirements.txt						   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+├── scripts											 <- Other scripts
+├── tests
+│     ├── \__init\__.py
+│     └── test_sample.py
+└── {{\ cookiecutter.project_slug\ }}
+    ├──\__init\__.py										 <- Makes src a Python module
+    ├── data_cleansing
+    ├── data_gens								<- Scripts to download or generate data	
+    ├── feature_engineering
+    ├── models
+    ├── utils
+    └── visualization
+
+#Credits
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [cookiecutter-docker-science](https://docker-science.github.io/) project template.
+Modified by @tsintermax for JDSC exclusively.
